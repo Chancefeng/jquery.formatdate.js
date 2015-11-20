@@ -5,15 +5,21 @@
  */
 ;(function($){
 	var defaults={
-
+		monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+		monthNamesShort: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+		dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+		dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六']
 	};
 	var _format="yyyy-MM-dd";
 	$.extend({
 		"formatDate":function(date,format,options){
 			if(!format) format=_format;
 			if(!date) date=new Date();
-			var res=$.fn.formatDate(date,format,options);
+			var res=formatDate(date,format,options);
 			return res;
+		},
+		"formatDates":function(date1, date2, format, options){
+			return $.fn.formatDates(date1, date2, format, options);
 		}
 	});
 	/**
@@ -25,15 +31,15 @@
 	 * 'dddd M/d','ddd M/d','ddd'……
 	 * @param   {[type]}                 options [description]
 	 */
-	$.fn.formatDate=function(date, format, options) {
+	function formatDate(date, format, options) {
 		return $.fn.formatDates(date, null, format, options);
 	}
 	/**
 	 * @author giscafer
 	 * @version 1.0
 	 * @date    2015-11-20T11:27:07+0800
-	 * @param   {Date}      date1   [description]
-	 * @param   {Date}      date2   [description]
+	 * @param   {Date}      date1   the first date to formatting.
+	 * @param   {Date}      date2   the second date to formatting.
 	 * @param   {String}    format  MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}
 	 * @param   {String}  
 	 */
