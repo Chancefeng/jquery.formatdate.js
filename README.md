@@ -18,6 +18,6 @@ $.formatDate(new Date(),"yyyy-MM-dd HH:mm:ss");
 
 ```js
 $.formatDates(new Date(),new Date("2015/11/27"),"MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}");
-"十一月 20 &#8212; 十一月 27 2015"
+// => "十一月 20 &#8212; 十一月 27 2015"
 
 ```
