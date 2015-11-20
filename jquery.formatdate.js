@@ -1,5 +1,5 @@
 /*!
- * jquery.formatdate.js
+ * jquery.formatdate.js (https://github.com/giscafer/jquery.formatdate.js)
  * @version 1.0
  * (c) 2015 giscafer
  */
@@ -35,13 +35,14 @@
 		return $.fn.formatDates(date, null, format, options);
 	}
 	/**
+	 * thanks fullCalender.js
 	 * @author giscafer
 	 * @version 1.0
 	 * @date    2015-11-20T11:27:07+0800
 	 * @param   {Date}      date1   the first date to formatting.
 	 * @param   {Date}      date2   the second date to formatting.
 	 * @param   {String}    format  MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}
-	 * @param   {String}  
+	 * @param   {String}   options
 	 */
 	$.fn.formatDates=function(date1, date2, format, options) {
 		options = options || defaults;
