@@ -43,6 +43,8 @@ $.formatDate(new Date(),'MMM')
 $.formatDate(new Date(),'MMMM')
 // => "十一月"
 
+$.formatDate(new Date(),'YYYY MMMM DDDD')
+// => "二零一五年 十一月 二四日"
 ```
 #### `formatDates`
 
